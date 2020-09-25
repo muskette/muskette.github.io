@@ -25,21 +25,36 @@
             border-style: none;
         }
 
+        table#spaceships>tbody>tr>td {
+            padding-left: 10px;
+        }
+
         .nobackground {
             background: rgba(0, 0, 0, 0);
             border: rgba(0, 0, 0, 0);
+            color: #000000;
         }
 
         td {
             border: 1px solid #009191;
             padding: 2px;
+            min-width: 150px;
+        }
+
+        td[colspan="2"] {
+            padding: 10px;
         }
 
         th {
             border: 1px solid #009191;
             background-color: #009191;
             padding: 5px;
-            color: #ffffff
+            color: #ffffff;
+            font-weight: bold;
+        }
+
+        th>h4 {
+            color: #000000;
         }
 
         h1 {
@@ -376,7 +391,7 @@
                         </tr>
                         <tr>
                             <td align="left">Dexterity</td>
-                            <td align="left">Acrobatics, Sleight of Hand, Stealth</td>
+                            <td align="left">Acrobatics, Piloting, Sleight of Hand, Stealth</td>
                         </tr>
                         <tr>
                             <td align="left">Constitution</td>
@@ -384,7 +399,7 @@
                         </tr>
                         <tr>
                             <td align="left">Intelligence</td>
-                            <td align="left">Arcana, History, Investigation, Nature, Religion</td>
+                            <td align="left">Arcana, Data, History, Investigation, Nature, Religion, Technology</td>
                         </tr>
                         <tr>
                             <td align="left">Wisdom</td>
@@ -655,6 +670,29 @@
                                 space)
                             </td>
                         </tr>
+                        <tr id="piloting">
+                            <th colspan="2" align="center">
+                                <h4>Piloting</h4>
+                            </th>
+                        </tr>
+                        <tr>
+                            <td align="left">Easy</td>
+                            <td align="left">Navigate through space debris.</td>
+                        </tr>
+                        <tr>
+                            <td align="left">Moderate</td>
+                            <td align="left">Dodge through an asteroid field</td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="left">Hard</td>
+                            <td align="left">Safely execute a crash landing</td>
+                        </tr>
+                        <tr>
+                            <td align="left">Very Hard</td>
+                            <td align="left">Pull the ship out of a Black Hole's gravitational pull
+                            </td>
+                        </tr>
                         <tr id="sleightofhand">
                             <th colspan="2" align="center">
                                 <h4>Sleight of Hand</h4>
@@ -899,6 +937,15 @@
                             <td align="left">1d20 + INT mod</td>
                         </tr>
                         <tr>
+                            <td align="left">Hacking</td>
+                            <td align="left">Requires 1 minute of time, an Interface Rig and an Data check. Roll
+                                advantage if proficient in Circuitry Kits and Data.
+                                On a failed check, roll a d6. On a 6 (or lower on more advanced devices), the device
+                                locks out and cannot be hacked.
+                            </td>
+                            <td align="left">1d20 + INT mod + Proficiency</td>
+                        </tr>
+                        <tr>
                             <td>Other possible uses</td>
                             <td align="left">Communicate with a creature without words. Estimate the value of a
                                 precious item. Forge a document. Recall lore about a craft or trade. Win a game of
@@ -936,6 +983,27 @@
                             <td align="left">Recall information that is known only by a privileged few; identify
                                 exceedingly rare people, places, objects, symbols, fauna, or flora</td>
                         </tr>
+                        <tr id="data">
+                            <th colspan="2" align="center">
+                                <h4>Data</h4>
+                            </th>
+                        </tr>
+                        <tr>
+                            <td align="left">Easy</td>
+                            <td align="left">Log in and execute a search on a public datapad</td>
+                        </tr>
+                        <tr>
+                            <td align="left">Moderate</td>
+                            <td align="left">Unlock a door at its access panel</td>
+                        </tr>
+                        <tr>
+                            <td align="left">Hard</td>
+                            <td align="left">Get the building layout of a secure facility</td>
+                        </tr>
+                        <tr>
+                            <td align="left">Very Hard</td>
+                            <td align="left">Access the automated turrets of a secure facility during an emergency</td>
+                        </tr>
                         <tr id="investigation">
                             <th colspan="2" align="center">
                                 <h4>Investigation - Other</h4>
@@ -963,6 +1031,28 @@
                             <td align="left">Identify a magically-hidden trap, object, or area; discern the purpose
                                 and process of a complicated device or system; determine the integrity of a
                                 structure, construct, or formation and identify any exploitable weak points</td>
+                        </tr>
+
+                        <tr id="technology
+                            <th colspan=" 2" align="center">
+                            <h4>Technology</h4>
+                            </th>
+                        </tr>
+                        <tr>
+                            <td align="left">Easy</td>
+                            <td align="left">Repair a device you've seen before</td>
+                        </tr>
+                        <tr>
+                            <td align="left">Moderate</td>
+                            <td align="left">Understand and study a new device</td>
+                        </tr>
+                        <tr>
+                            <td align="left">Hard</td>
+                            <td align="left">Disable a hostile droid</td>
+                        </tr>
+                        <tr>
+                            <td align="left">Very Hard</td>
+                            <td align="left">Sabotage a secure device</td>
                         </tr>
                     </table>
                     <br>
@@ -992,6 +1082,12 @@
                                 willpower
                             </td>
                             <td align="left">1d20 + WIS mod + Proficiency (if proficient)</td>
+                        </tr>
+                        <tr>
+                            <td align="left">Check</td>
+                            <td align="left">Reading body language, understanding someone's feelings, noticing
+                                things about the environment, or caring for an injured person</td>
+                            <td align="left">1d20 + WIS mod</td>
                         </tr>
                         <tr>
                             <td align="left">Check</td>
@@ -1868,6 +1964,240 @@
                         takes any damage. A stable creature that isn't healed regains 1 hit point after 1d4 hours.
                     </p>
                     <br>
+                    <h2>Ship Combat</h2>
+                    <p>Each character on a starship chooses one of the following roles
+                        when they roll initiative. Each role lets a character to take special
+                        actions to control the ship.</p>
+                    <table id="shipcombatactions">
+                        <tr id="captain">
+                            <th colspan="2" align="center">
+                                Captain
+                            </th>
+                        </tr>
+                        <tr>
+                            <td colspan="2" align="left">As the captain, you <b>roll initiative</b> for the entire ship.
+                                The entire party acts on that
+                                turn
+                                in the initiative order, and you can
+                                choose in which order the crew members take their turns.</td>
+                        </tr>
+                        <tr>
+                            <td align="left"><b>Brace for Impact</b></td>
+                            <td align="left">Each time your ship takes damage
+                                before the beginning of your next turn, you can roll 1d6 and
+                                subtract the number rolled from the mega damage your ship
+                                takes, to a minimum of 1.</td>
+                        </tr>
+                        <tr>
+                            <td align="left"><b>Fire at Will</b></td>
+                            <td align="left">One gunner of your choice can then use its
+                                reaction to make one attack with a ship weapon.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="left"><b>Full Speed Ahead</b></td>
+                            <td align="left">The pilot can then use its reaction
+                                to move the ship half its movement within the cone of movement.</td>
+                        </tr>
+                        <tr id="dogfighter">
+                            <th colspan="2" align="center">
+                                Dogfighter
+                            </th>
+                        </tr>
+                        <tr>
+                            <td align="left"><b>Dogfighting</b></td>
+                            <td align="left">If your ship is Corvette-sized or smaller
+                                and a ship of the same size classification is behind you within
+                                1,000 feet, you can use your action to perform a complex
+                                maneuver. Make a Dexterity (Piloting) check, contested by
+                                the other ship. On a success, following several tight turns,
+                                you switch places with that ship. The direction both ships
+                                face remains the same.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="left"><b>Move</b></td>
+                            <td align="left">You move the ship up to its speed within the
+                                ship’s cone of movement. Once you have finished moving,
+                                you can rotate the direction your ship is facing by up to its
+                                maneuverability score.
+                                As opposed to the Pilot's Move action, this does not consume your action</td>
+                        </tr>
+                        <tr>
+                            <td align="left"><b>Open Fire</b></td>
+                            <td align="left">You can take the Attack action on your turn
+                                to attack with one of the ship’s weapons. You can make multiple attacks if you have a
+                                feature, such as Extra Attack, that
+                                gives you extra attacks. If you score a critical hit on a ship,
+                                you randomly disable one of the target ship’s systems.</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" align="left">If a system or weapon drops to 0 hit points, it is disabled. If
+                                the engines drop to 0 hit
+                                points, the ship is crippled
+                                and can only move at half speed.</td>
+                        </tr>
+                        <tr>
+                            <td align="left"><b>Targeted Attack</b></td>
+                            <td align="left">While you are within 1,000 feet of
+                                another ship, you can to attempt to disable one of that ship’s
+                                systems with a well-placed hit. Make an attack targeting the
+                                ship with disadvantage. On a hit, you deal damage directly
+                                to a system of your choice, a weapon of your choice, or the
+                                ship’s impulse engines. If the attack is blocked by a shield,
+                                the damage is subtracted from the target ship’s shield points
+                                before it damages any system. Systems, weapons, and
+                                engines have 10 mega hit points each. Damage to systems is
+                                also deducted from the target ship’s hit points.</td>
+                        </tr>
+                        <tr id="engineer">
+                            <th colspan="2" align="center">
+                                Engineer
+                            </th>
+                        </tr>
+                        <tr>
+                            <td colspan="2" align="left">As the engineer, you can use your bonus action to change
+                                the direction the ship’s <b>shield</b> faces. At the beginning of the
+                                initiative order, the shield regains half its maximum shield
+                                points, rounded up.</td>
+                        </tr>
+                        <tr>
+                            <td align="left"><b>Directing Power</b></td>
+                            <td align="left">
+                                <p>You can deactivate the shield and
+                                    direct its power to the impulse engines or into one of the
+                                    ship’s weapons. If you invest the power in the engines, the
+                                    ship’s movement speed increases by half until the beginning
+                                    of your next turn. If you invest the power in one of the ship’s
+                                    weapons, a gunner can make one additional attack using that
+                                    weapon when they take the Open Fire action.</p>
+                                <p>
+                                    Alternatively, you can draw power from the ship’s weapons and invest it in the
+                                    ship’s
+                                    shields. When you do so, until
+                                    the beginning of your next turn, the ship’s shields cover two
+                                    of its consecutive sides, instead of only one, and it regains
+                                    all of its shield points at the beginning of the initiative order,
+                                    instead of only half. In exchange, each gunner makes one
+                                    weapon attack fewer than normal when they take the Open
+                                    Fire action.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="left"> <b>Overcharge</b></td>
+                            <td align="left">If you are a spellcaster, you can use your
+                                action to expend a spell slot with a level greater than or
+                                equal to the Dark Matter engine’s class to overcharge the
+                                engine. The shield recharges completely, and until the beginning of your next turn,
+                                power is
+                                invested in the ship’s engines
+                                (increasing the ship’s movement speed by half) and every
+                                gun (allowing each gunner to make one additional attack
+                                using that weapon when they take the Open Fire action on
+                                their turn). Once you use this ability, you can’t use it again for
+                                1 minute.</td>
+                        </tr>
+                        <tr>
+                            <td align="left"> <b>System Repair</b></td>
+                            <td align="left">You can use your action to repair a ship
+                                system or weapon that has 0 hit points and is deactivated.
+                                When you do so, make a DC 15 Intelligence (Technology)
+                                check. On a success, the system or weapon regains 1 mega
+                                hit point and reactivates at the beginning of your next turn.</td>
+                        </tr>
+                        <tr>
+                            <td align="left"> <b>Void Jump</b></td>
+                            <td align="left">You can begin the charging process for a
+                                void jump. Once a Dark Matter engine has begun to charge,
+                                it will jump in 1 minute. No intervention can stop or slow
+                                this process; once it is begun, nothing short of destroying
+                                the ship can interrupt the jump. The pilot is responsible for
+                                guiding the ship on the jump itself and rolls on the Jump
+                                Navigation table when the jump begins.</td>
+                        </tr>
+                        <tr id="gunner">
+                            <th colspan="2" align="center">
+                                Gunner
+                            </th>
+                        </tr>
+                        <tr>
+                            <td colspan="2" align="left">If a weapon has the <b>Facing</b> property, it can only be
+                                fired in
+                                a 90-degree cone in the direction in which it was mounted.
+                                You add your proficiency bonus and Dexterity modifier to an
+                                attack roll you make with a ship’s weapon, but you don’t add
+                                any ability modifier to the weapon’s damage rolls.</td>
+                        </tr>
+                        <tr>
+                            <td align="left"><b>Open Fire</b></td>
+                            <td align="left">You can take the Attack action on your turn
+                                to attack with one of the ship’s weapons. You can make multiple attacks if you have a
+                                feature, such as Extra Attack, that
+                                gives you extra attacks. If you score a critical hit on a ship,
+                                you randomly disable one of the target ship’s systems.</td>
+                        </tr>
+                        <tr>
+                            <td align="left"><b>Readied Attack</b></td>
+                            <td align="left">You can use your action to ready an
+                                attack with a ship’s weapon, just as you would ready an attack
+                                with a normal weapon.
+                            </td>
+                        </tr>
+                        <tr id="pilot">
+                            <th colspan="2" align="center">
+                                Pilot
+                            </th>
+                        </tr>
+                        <tr>
+                            <td colspan="2" align="left">Each ship’s movement is limited to a <b>cone of movement</b>,
+                                which extends in the direction your ship is facing and is
+                                as wide as the ship’s Maneuverability score, measured in
+                                degrees.</td>
+                        </tr>
+                        <tr>
+                            <td align="left"><b>Move</b></td>
+                            <td align="left">You move the ship up to its speed within the
+                                ship’s cone of movement. Once you have finished moving,
+                                you can rotate the direction your ship is facing by up to its
+                                maneuverability score.</td>
+                        </tr>
+                        <tr>
+                            <td align="left"><b>Evasive Maneuvers</b></td>
+                            <td align="left">Instead of moving, you add your
+                                Dexterity modifier to the ship’s AC and have advantage on
+                                Dexterity saving throws you make on behalf of the ship until
+                                the beginning of your next turn.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="left"><b>Dogfighting</b></td>
+                            <td align="left">If your ship is Corvette-sized or smaller
+                                and a ship of the same size classification is behind you within
+                                1,000 feet, you can use your action to perform a complex
+                                maneuver. Make a Dexterity (Piloting) check, contested by
+                                the other ship. On a success, following several tight turns,
+                                you switch places with that ship. The direction both ships
+                                face remains the same.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="left"><b>Hard Turn</b></td>
+                            <td align="left">You move your ship 500 feet in any direction
+                                and rotate to face any way you choose.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="left"><b>Ram</b></td>
+                            <td align="left">You can ram your ship directly into a target by
+                                moving up to your speed within your cone of movement and
+                                entering a ship or mega creature’s space. Your ship and the
+                                target each take 2d10 mega bludgeoning damage. Larger
+                                ships deal and take more damage in a ram: Transport ships
+                                deal 3d10, Corvettes and Frigates deal 4d10.
+                            </td>
+                        </tr>
+                    </table>
+
                     <h2 id="wildmagic">Wild Magic</h2>
                     <i>Immediately after you cast a sorcerer spell of 1st level or higher, the DM can have you roll
                         a
@@ -2531,19 +2861,13 @@
                                 <td colspan="4"><i>Light Armor</i></td>
                             </tr>
                             <tr>
-                                <td>&nbsp;&nbsp;&nbsp;&nbsp;Padded²</td>
-                                <td align="right">5 gp</td>
-                                <td>11 + Dex mod</td>
-                                <td align="right">8 lb.</td>
-                            </tr>
-                            <tr>
-                                <td>&nbsp;&nbsp;&nbsp;&nbsp;Leather</td>
+                                <td>&nbsp;&nbsp;&nbsp;&nbsp;Nanofiber Vest</td>
                                 <td align="right">10 gp</td>
                                 <td>11 + Dex mod</td>
                                 <td align="right">10 lb.</td>
                             </tr>
                             <tr>
-                                <td>&nbsp;&nbsp;&nbsp;&nbsp;Studded leather</td>
+                                <td>&nbsp;&nbsp;&nbsp;&nbsp;Tactical Nanofiber Vest</td>
                                 <td align="right">45 gp</td>
                                 <td>12 + Dex mod</td>
                                 <td align="right">13 lb.</td>
@@ -2552,61 +2876,43 @@
                                 <td colspan="4"><i>Medium Armor</i></td>
                             </tr>
                             <tr>
-                                <td>&nbsp;&nbsp;&nbsp;&nbsp;Hide</td>
+                                <td>&nbsp;&nbsp;&nbsp;&nbsp;Environ Suit</td>
                                 <td align="right">10 gp</td>
                                 <td>12 + Dex mod (Max 2)</td>
                                 <td align="right">12 lb.</td>
                             </tr>
                             <tr>
-                                <td>&nbsp;&nbsp;&nbsp;&nbsp;Chain shirt</td>
+                                <td>&nbsp;&nbsp;&nbsp;&nbsp;Carbonic Suit</td>
                                 <td align="right">50 gp</td>
                                 <td>13 + Dex mod (Max 2)</td>
                                 <td align="right">20 lb.</td>
                             </tr>
                             <tr>
-                                <td>&nbsp;&nbsp;&nbsp;&nbsp;Scale mail²</td>
+                                <td>&nbsp;&nbsp;&nbsp;&nbsp;Triplate Suit</td>
                                 <td align="right">50 gp</td>
                                 <td>14 + Dex mod (Max 2)</td>
                                 <td align="right">45 lb.</td>
                             </tr>
                             <tr>
-                                <td>&nbsp;&nbsp;&nbsp;&nbsp;Breastplate</td>
-                                <td align="right">400 gp</td>
-                                <td>14 + Dex mod (Max 2)</td>
-                                <td align="right">20 lb.</td>
-                            </tr>
-                            <tr>
-                                <td>&nbsp;&nbsp;&nbsp;&nbsp;Half plate²</td>
-                                <td align="right">750 gp</td>
-                                <td>15 + Dex mod (Max 2)</td>
-                                <td align="right">40 lb.</td>
-                            </tr>
-                            <tr>
                                 <td colspan="4"><i>Heavy Armor</i></td>
                             </tr>
                             <tr>
-                                <td>&nbsp;&nbsp;&nbsp;&nbsp;Ring mail²</td>
+                                <td>&nbsp;&nbsp;&nbsp;&nbsp;Ferrofiber Hardsuit²</td>
                                 <td align="right">30 gp</td>
                                 <td>14</td>
                                 <td align="right">40 lb.</td>
                             </tr>
                             <tr>
-                                <td>&nbsp;&nbsp;&nbsp;&nbsp;Chain mail²</td>
+                                <td>&nbsp;&nbsp;&nbsp;&nbsp;Tactical Carbonic Hardsuit²</td>
                                 <td align="right">75 gp</td>
                                 <td>16</td>
                                 <td align="right">55 lb.</td>
                             </tr>
                             <tr>
-                                <td>&nbsp;&nbsp;&nbsp;&nbsp;Splint²</td>
+                                <td>&nbsp;&nbsp;&nbsp;&nbsp;Starshield Hardsuit²</td>
                                 <td align="right">200 gp</td>
                                 <td>17</td>
                                 <td align="right">60 lb.</td>
-                            </tr>
-                            <tr>
-                                <td>&nbsp;&nbsp;&nbsp;&nbsp;Plate²</td>
-                                <td align="right">1,500 gp</td>
-                                <td>18</td>
-                                <td align="right">65 lb.</td>
                             </tr>
                             <tr>
                                 <td colspan="4"><i>Shield</i></td>
@@ -4158,16 +4464,128 @@
                         </tr>
                     </table>
 
-                    <h2>Traveling</h2>
-                    <h3 id="maptravelpace">Map Travel Paces</h3>
-                    <p><i>Below are guidelines for traveling in different sized map areas at different paces (slow,
-                            normal, and fast.)</i></p>
-                    <table>
+                    <table id="spaceships">
                         <tr>
-                            <th class="nobackground" colspan="3" align="left">
-                                <h4>Dungeon</h4>
+                            <th class="nobackground" align="left" colspan="3">
+                                <h3>
+                                    Spaceships
+                                </h3>
                             </th>
                         </tr>
+                        <tr>
+                            <th>
+                                Class
+                            </th>
+                            <th>
+                                Dimensions
+                            </th>
+                            <th>
+                                Req. Level
+                            </th>
+                        </tr>
+                        <tr>
+                            <td>
+                                Fighter
+                            </td>
+                            <td>
+                                < 100 ft&sup2; </td>
+                            <td>
+                                1st
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Personal
+                            </td>
+                            <td>
+                                250 ft&sup2;
+                            </td>
+                            <td>
+                                3rd
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Transport
+                            </td>
+                            <td>
+                                500 ft&sup2;
+                            </td>
+                            <td>
+                                5th
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Corvette
+                            </td>
+                            <td>
+                                1000 ft&sup2;
+                            </td>
+                            <td>
+                                11th
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Frigate
+                            </td>
+                            <td>
+                                1500 ft&sup2;
+                            </td>
+                            <td>
+                                17th
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Light Cruiser
+                            </td>
+                            <td>
+                                2000 ft&sup2;
+                            </td>
+                            <td>
+                                -
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Heavy Cruiser
+                            </td>
+                            <td>
+                                2500 ft&sup2;
+                            </td>
+                            <td>
+                                -
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Capital
+                            </td>
+                            <td>
+                                4000 ft&sup2;
+                            </td>
+                            <td>
+                                -
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Titan
+                            </td>
+                            <td>
+                                > 5000 ft&sup2;
+                            </td>
+                            <td>
+                                -
+                            </td>
+                        </tr>
+                    </table>
+
+                    <h2>Traveling</h2>
+                    <h3>Dungeon</h3>
+                    <table>
                         <tr>
                             <th>Slow Pace</th>
                             <th>Normal Pace</th>
@@ -4183,12 +4601,8 @@
                         </tr>
                     </table>
                     <br>
+                    <h3>City</h3>
                     <table>
-                        <tr>
-                            <th class="nobackground" colspan="3" align="left">
-                                <h4>City</h4>
-                            </th>
-                        </tr>
                         <tr>
                             <th>Slow Pace</th>
                             <th>Normal Pace</th>
@@ -4205,12 +4619,8 @@
                         </tr>
                     </table>
                     <br>
+                    <h3>Province</h3>
                     <table>
-                        <tr>
-                            <th class="nobackground" colspan="3" align="left">
-                                <h4>Province</h4>
-                            </th>
-                        </tr>
                         <tr>
                             <th>Slow Pace</th>
                             <th>Normal Pace</th>
@@ -4232,12 +4642,8 @@
                         </tr>
                     </table>
                     <br>
+                    <h3>Kingdom</h3>
                     <table>
-                        <tr>
-                            <th class="nobackground" colspan="3" align="left">
-                                <h4>Kingdom</h4>
-                            </th>
-                        </tr>
                         <tr>
                             <th>Slow Pace</th>
                             <th>Normal Pace</th>
@@ -4258,6 +4664,113 @@
                             <th class="nobackground" colspan="3" align="center"><i>1 hex = 6 miles</i></th>
                         </tr>
                     </table>
+                    <h3>Dark Matter Engine Classes</h3>
+                    <table>
+                        <tr>
+                            <th>Class</th>
+                            <th>Slot Level</th>
+                            <th>Jump Distance</th>
+                            <th>Time to Cross Galaxy</th>
+                        </tr>
+                        <tr>
+                            <td><b>1</b></td>
+                            <td>1st</td>
+                            <td>800 LY</td>
+                            <td>63 days</td>
+                        </tr>
+                        <tr>
+                            <td><b>2</b></td>
+                            <td>2nd</td>
+                            <td>1,300 LY</td>
+                            <td>39 days</td>
+                        </tr>
+                        <tr>
+                            <td><b>3</b></td>
+                            <td>3rd</td>
+                            <td>2,500 LY</td>
+                            <td>20 days</td>
+                        </tr>
+                        <tr>
+                            <td><b>4</b></td>
+                            <td>4th</td>
+                            <td>3,400 LY</td>
+                            <td>15 days</td>
+                        </tr>
+                        <tr>
+                            <td><b>5</b></td>
+                            <td>5th</td>
+                            <td>5,200 LY</td>
+                            <td>10 days</td>
+                        </tr>
+                        <tr>
+                            <td><b>6</b></td>
+                            <td>6th</td>
+                            <td>8,200 LY</td>
+                            <td>6 days</td>
+                        </tr>
+                        <tr>
+                            <td><b>7</b></td>
+                            <td>7th</td>
+                            <td>13,000 LY</td>
+                            <td>4 days</td>
+                        </tr>
+                        <tr>
+                            <td><b>8</b></td>
+                            <td>8th</td>
+                            <td>20,000 LY</td>
+                            <td>2.5 days</td>
+                        </tr>
+                        <tr>
+                            <td><b>9</b></td>
+                            <td>9th</td>
+                            <td>32,000 LY</td>
+                            <td>1.5 days</td>
+                        </tr>
+                        <tr>
+                            <td><b>10</b></td>
+                            <td>-</td>
+                            <td>50,000 LY</td>
+                            <td>1 day</td>
+                        </tr>
+                    </table>
+
+                    <h3 id="quickfind">Blind Jumps</h3>
+                    <table>
+                        <tr>
+                            <th align="left">d100</th>
+                            <th align="center" colspan="2">Jump</th>
+                        </tr>
+                        <tr>
+                            <td align="left">01-20</td>
+                            <td align="left"><b>The Black</b></td>
+                            <td align="left">Your ship emerges from its jump in deep
+                                space. You are no closer to your destination.</td>
+                        </tr>
+                        <tr>
+                            <td align="left">21-50</td>
+                            <td align="left"><b>Off Target</b></td>
+                            <td align="left">Your void jump sends you wide of your
+                                intended target. At the GM’s discretion, there is a 10%
+                                chance that you encounter an undiscovered planet,
+                                derelict spacecraft, spatial anomaly, or other significant
+                                location. You are up to 50% closer to your destination
+                                than you began.</td>
+                        </tr>
+                        <tr>
+                            <td align="left">51-80</td>
+                            <td align="left"><b>Near Target</b></td>
+                            <td align="left">You are close enough to your target to
+                                reach it with 10 minutes of sublight travel</td>
+                        </tr>
+                        <tr>
+                            <td align="left">81-00</td>
+                            <td align="left"><b>Perfect Jump</b></td>
+                            <td align="left">Your ship emerges from the void jump
+                                precisely where you intend to.</td>
+                        </tr>
+                    </table>
+                    <br />
+
                     <br>
                     <h3 id="travelpace">Travel Paces</h3>
                     <p><i>Below are guidelines for how fast a PC can travel on foot in actual distances at different
@@ -4362,6 +4875,78 @@
                         </tr>
                     </table>
                     <br>
+                    <h2 id="environmentalhazards">Environmental Hazards</h2>
+                    <h3>Extreme Temperatures</h3>
+                    <p>If you are exposed to extreme heat or cold while unprotected, you
+                        take 1d6 cold or fire damage at the beginning of your turn. If you
+                        are still exposed at the beginning of your next turn, you take 2d6
+                        damage, and 3d6 damage at the beginning of the turn following
+                        that, and so on, up to a maximum of 10d6.</p>
+                    <h3>Falling</h3>
+                    <p>A fall from a great height is one of the most common hazards
+                        facing a spacer. At the end of a fall, you take 1d6 bludgeoning
+                        damage for every 10 feet you fell, to a maximum of 20d6. You
+                        land prone, unless you avoid taking damage from the fall.</p>
+                    <h3>Suffocating</h3>
+                    <p>You can hold your breath for a number of minutes equal to 1 +
+                        your Constitution modifier (minimum of 30 seconds).
+                        When you run out of breath or are choking, you can survive
+                        for a number of rounds equal to your Constitution modifier
+                        (minimum of 1 round). At the start of your next turn, you drop to
+                        0 hit points and are dying, and you can’t regain hit points or be
+                        stabilized until you can breathe again.</p>
+                    <h3>Vacuum</h3>
+                    <p>Upon entering a vacuum without a breathing apparatus, you can
+                        survive a number of rounds equal to 1 + your Constitution modifier (minimum 2 rounds). At the
+                        start of your next turn, you drop to
+                        0 hit points and are dying.
+                        Even if you have a breathing apparatus, you might still be
+                        subject to Extreme Temperature if you don’t have other protective
+                        equipment.
+                        Casting a spell with a verbal component is impossible in a
+                        vacuum</p>
+                    <h3>Gravity</h3>
+                    <table>
+                        <tr>
+                            <th />
+                            <th>Weight</th>
+                            <th>Move Speed</th>
+                            <th>Other Rules</th>
+                        </tr>
+                        <tr>
+                            <td><b>Zero Gravity</b></td>
+                            <td>Nullified</td>
+                            <td>None, unless climbing</td>
+                            <td>Once a creature or object is
+                                set into motion, it can’t stop
+                                moving until it collides with an
+                                obstacle.</td>
+                        </tr>
+                        <tr>
+                            <td><b>Light Gravity</b></td>
+                            <td>Halved</td>
+                            <td>Normal</td>
+                            <td>You take half damage from
+                                falling.</td>
+                        </tr>
+                        <tr>
+                            <td><b>Heavy Gravity</b></td>
+                            <td>Doubled</td>
+                            <td>Costs 1 extra foot (stacks with difficult terrain)</td>
+                            <td>Standing up from prone requires a DC12 Strength check.</td>
+                        </tr>
+                        <tr>
+                            <td><b>Extreme Gravity</b></td>
+                            <td>Quadrupled</td>
+                            <td>Costs 1 extra foot (stacks with difficult terrain)</td>
+                            <td>You take bludgeoning damage
+                                at the beginning of your turn:
+                                1d4 if Small, 1d6 if Medium,
+                                1d8 if Large, 1d10 if Huge,
+                                1d12 if Gargantuan.</td>
+                        </tr>
+                    </table>
+
                     <h2 id="encounterdistance">Encounter Distances</h2>
                     <i>Below are guidelines on when to start an encounter based on terrain, audible distances, and
                         outdoor visibility.</i><br /><br />
@@ -4651,36 +5236,6 @@
                         </tr>
                     </table>
                     <br />
-                    <!--				<table id="aoetargets">
-					<tr>
-						<th colspan="2">
-							<h3>Targets in Area of Effect</h3></th>
-					</tr>
-					<tr>
-						<th>Area</th>
-						<th>Number of Targets</th>
-					</tr>
-					<tr>
-						<td align="left">Cone</td>
-						<td align="left">Size / 10 (round up)</td>
-					</tr>
-					<tr>
-						<td align="left">Cube or Square</td>
-						<td align="left">Size / 5 (round up)</td>
-					</tr>
-					<tr>
-						<td align="left">Cylinder</td>
-						<td align="left">Radius / 5 (round up)</td>
-					</tr>
-					<tr>
-						<td align="left">Line</td>
-						<td align="left">Length / 30 (round up)</td>
-					</tr>
-					<tr>
-						<td align="left">Sphere or Circle</td>
-						<td align="left">Radius / 5 (round up)</td>
-					</tr>
-				</table><br />-->
                     <h2>Improvizing Damage</h2>
                     <table id="improvizingdamage">
                         <tr>

@@ -1,4 +1,9 @@
-
+@font-face {
+    font-family: 'Standing Flower Script Personal Use';
+    font-style: italic;
+    font-weight: 400;
+    src: local('Standing Flower Script Personal Use'), url('https://fonts.cdnfonts.com/s/87324/StandingFlowerScriptPersonal-L31Y3.woff') format('woff');
+}
 /*region flex layout*/
 #content {
     display: flex;

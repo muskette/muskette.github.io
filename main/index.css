@@ -1,0 +1,125 @@
+
+/*region flex layout*/
+#content {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1500px;
+}
+
+.links {
+    flex-grow: 1;
+    min-width: 100px;
+}
+
+.message {
+    max-width: 1150px;
+    flex-grow: 3;
+}
+/*endregion*/
+
+body {
+    margin: 0;
+}
+h1, p, a {
+    font-family: Lato, sans-serif;
+    margin: 0;
+}
+
+/* region heading */
+#heading {
+    background-image: url("./pexels-suzy-hazelwood-1762973.jpg");
+    background-size: cover;
+    background-position: center center;
+    max-height: 33vh;
+    min-height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #2f95c9;
+}
+#heading > h1 {
+    color: rgba(255, 255, 255, 1);
+    font-size: 64pt;
+    letter-spacing: 2px;
+    text-align: center;
+    font-weight: 500;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+/*endregion*/
+
+
+/* region content */
+#content {
+    margin: 25px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.message>h1 {
+    color: #2f678a;
+    font-size: 46px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    line-height: 55px;
+}
+.message>div>p{
+    padding-top: 10pt;
+}
+
+p, a {
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 25px;
+}
+
+#signoff {
+    font-family: 'Standing Flower Script Personal Use', sans-serif;
+    font-size: 46px;
+    margin-top: 20px;
+}
+
+.button {
+    border-radius: 50px;
+    word-wrap: none;
+    background-color: rgb(47, 152, 204);
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    text-decoration: none;
+    font-size: 28px;width: 200px;
+    transition: all 0.5s;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin: 10px;
+    background-image: url("./pexels-suzy-hazelwood-1762973.jpg");
+    padding-left: 30px;
+}
+
+.button div {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.button div:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.button:hover div {
+    padding-right: 25px;
+}
+
+.button:hover div:after {
+    opacity: 1;
+    right: 0;
+}
+/*endregion*/
